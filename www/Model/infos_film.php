@@ -2,7 +2,7 @@
 
 
 function get_film_infos($id_film) {
-    require("../Ressources/db_call.php");
+    require("Ressources/db_call.php");
     $req = $bd->query("SELECT * FROM film WHERE id = " . $id_film);
 
     $titre = "";
@@ -22,12 +22,12 @@ function get_film_infos($id_film) {
 
     return ["titre" => $titre, "date" => $date_sortie, "synopsis" => $synopsis, "note" => $note, "autres_infos" => $autres_infos];
 }
+/*
+function get_acteurs($id_film) {
 
-function get_acteurs() {
+    require("Ressources/db_call.php");
 
-    require("../Ressources/db_call.php");
-
-    $req = $bd->query("SELECT * FROM personne p JOIN film_has_personne fhp ON p.id = fhp.id_personne WHERE fhp.role = 'acteur'");
+    $req = $bd->query("SELECT * FROM personne p JOIN film_has_personne fhp ON p.id = fhp.id_personne WHERE fhp.role = 'acteur' AND fhp.id_film = '". $id_film);
 
     $acteurs = [];
 
@@ -36,4 +36,4 @@ function get_acteurs() {
     }
 
     return $acteurs;
-}
+}*/

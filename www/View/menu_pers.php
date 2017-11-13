@@ -1,5 +1,5 @@
 <nav>
     <ul>
-        <li><a href="../Controller/C_film.php">Retour</a></li>
+        <li><a href="../index.php?page=C_film">Retour</a></li>
     </ul>
 </nav>

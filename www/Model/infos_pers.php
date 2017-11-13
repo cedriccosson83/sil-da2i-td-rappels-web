@@ -2,7 +2,7 @@
 
 
 function get_pers_infos() {
-	require("../Ressources/db_call.php");
+	require("Ressources/db_call.php");
     $req = $bd->query("SELECT * FROM personne");
 
     $personnages = [];

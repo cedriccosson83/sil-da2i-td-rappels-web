@@ -4,7 +4,7 @@
 
 function get_images_legendees_pers($id_film) {
 
-    require("../Ressources/db_call.php");
+    require("Ressources/db_call.php");
 
     $req = $bd->query("SELECT * FROM personne p JOIN film_has_personne fhp ON p.id = fhp.id_personne WHERE id_film = " . $id_film);
 

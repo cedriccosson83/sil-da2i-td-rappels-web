@@ -1,6 +1,14 @@
+<?php
+
+$id = $data[0];
+$personnage = $data[1];
+$films = $data[2];
+
+?>
+
 <body>
 <header>
-    <?php include("menu_pers.php"); ?>
+    <?php getBlock("View/menu_pers.php"); ?>
 </header>
 <main>
     <section>
@@ -24,7 +32,7 @@
             <div class="flex-container">
                 <?php foreach ($films as $key => $film) { ?>
                     <div class="flex-component third">
-                        <p><a href="../Controller/C_film.php?film=<?php echo($film['id']); ?>"><img src="../images/<?php echo($film['chemin']); ?>" alt="<?php echo($film['chemin']); ?>"/></a><p>
+                        <p><a href="index.php?page=film&film=<?php echo($film['id']); ?>"><img src="../images/<?php echo($film['chemin']); ?>" alt="<?php echo($film['chemin']); ?>"/></a><p>
                         <p><?php echo($film['titre']); ?> - <?php echo($film['role']); ?></p>  
                     </div>
                 <?php } ?>
@@ -34,7 +42,7 @@
 </main>
 
 <footer>
-    <?php include("footer.php"); ?>
+    <?php getBlock("View/footer.php"); ?>
 </footer>
 </body>
 </html>

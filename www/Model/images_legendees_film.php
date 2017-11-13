@@ -3,7 +3,7 @@
 
 function get_images_legendees_film($id_film) {
 
-    require("../Ressources/db_call.php");
+    require("Ressources/db_call.php");
 
     $req = $bd->query("SELECT * FROM film_has_photo WHERE id_film = " . $id_film);
 

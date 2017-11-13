@@ -1,7 +1,7 @@
 <?php
 
 function get_the_pers($id) {
-        require("../Ressources/db_call.php");
+        require("Ressources/db_call.php");
         $req = $bd->query("SELECT * FROM personne WHERE id = " . $id);
         $personnage = [];
         foreach ($req as $result) {
@@ -20,7 +20,7 @@ function get_the_pers($id) {
 }
 
 function get_pers_movies($id) {
-        require("../Ressources/db_call.php");
+        require("Ressources/db_call.php");
         $films = [];
         $req = $bd->query("SELECT * FROM film_has_personne WHERE id_personne = " . $id);
         foreach ($req as $result) {

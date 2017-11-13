@@ -1,7 +1,14 @@
+<?php
 
+$infos = $data[0];
+$acteurs = $data[1];
+$affiche = $data[2];
+$personnages = $data[3];
+
+?>
     <body>
         <header>
-            <?php include("menu.php"); ?>
+            <?php getBlock("View/menu.php"); ?>
         </header>
         <main>
             <section>
@@ -64,7 +71,7 @@
                                         <div class="flex_component half right">
                                             <p> Biographie : </p>
                                             <p><?php echo $p['bio']; ?></p>
-                                            <a class="btn-more" href="../Controller/C_personnage.php?personnage=<?php echo $p['id']; ?>"> En savoir plus </a>
+                                            <a class="btn-more" href="index.php?page=personnage&personnage=<?php echo $p['id']; ?>"> En savoir plus </a>
                                         </div>
                                     </div>
 <?php
@@ -84,7 +91,7 @@
                                     <div class="acteur flex_component third">
                                         <figure><img src="../images/<?php echo $p['chemin'] ?>" alt="<?php echo $p['legende']?>"/>
                                             <figcaption><?php echo $p['prenom'] . " " . $p['nom'];?></figcaption></figure>
-                                        <a class="btn-more" href="../Controller/C_personnage.php?personnage=<?php echo $p['id']; ?>"> En savoir plus </a>
+                                        <a class="btn-more" href="index.php?page=personnage&personnage=<?php echo $p['id']; ?>"> En savoir plus </a>
                                     </div>
 <?php
                                 }
@@ -96,7 +103,7 @@
         </main>
 
         <footer>
-            <?php include("footer.php"); ?>
+            <?php getBlock("View/footer.php"); ?>
         </footer>
     </body>
 </html>
