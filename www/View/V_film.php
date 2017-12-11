@@ -47,6 +47,7 @@ $personnages = $data[3];
                             <p>Synopsis : <?php echo $infos['synopsis']; ?></p>
 
                             <aside>
+                                <button id="load_faq"> Afficher la FAQ </button>
                                 <p><?php echo $infos['autres_infos'];?></p>
                             </aside>
 

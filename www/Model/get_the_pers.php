@@ -5,7 +5,6 @@ function get_the_pers($id) {
         $req = $bd->query("SELECT * FROM personne WHERE id = " . $id);
         $personnage = [];
         foreach ($req as $result) {
-            //print_r($result);
             $req1 = $bd->query("SELECT * FROM photo p JOIN personne_has_photo php ON p.id = php.id_photo JOIN film_has_personne fhp ON fhp.id_personne = php.id_personne  WHERE php.id_personne =" . $result['id']);
             $result1 = $req1->fetch();
             $personnage['nom'] = $result['nom'];
@@ -21,6 +20,7 @@ function get_the_pers($id) {
 }
 
 function get_pers_movies($id) {
+
         require("Ressources/db_call.php");
         $films = [];
         $request = $bd->query("SELECT * FROM film_has_personne WHERE id_personne = " . $id);

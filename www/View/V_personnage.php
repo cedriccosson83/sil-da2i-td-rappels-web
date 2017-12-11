@@ -7,8 +7,6 @@ $two_favorite_actors = $data[3];
 $have_two = $data[4];
 $favorite_first = $two_favorite_actors[0];
 $favorite_second = $two_favorite_actors[1];
-print_r($favorite_first);
-print_r($favorite_second);
 ?>
 
 <body>

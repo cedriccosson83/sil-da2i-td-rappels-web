@@ -41,6 +41,13 @@ $films = $data[1];
                 <input type="submit" value="Rechercher le personnage">
             </form>
 
+
+            <br/><br/>
+
+            <p>Vous pouvez également accéder au CRUD du site (c'est pas tous les jours que vous aurez cette permission).</p>
+
+            <a href="index.php?page=CRUD"> Accéder au CRUD </a>
+
         </article>
     </section>
 </main>
