@@ -6,9 +6,13 @@
  * Time: 12:00
  */
 
-/* faire 4 formulaires : create  -  replace  -  update  -  delete */
+/* create  -  update  -  delete */
+
+include("Model/get_personnages.php");
+
+$personnages = personnages();
 
 getBlock("View/head.php");
-getBlock("View/V_CRUD.php");
+getBlock("View/V_CRUD.php", [$personnages]);
 
 

@@ -5,7 +5,7 @@ require("../Ressources/db_call.php");
 $personnages = [];
 $message = "";
 
-$sql = "SELECT * FROM `personne`";
+$sql = "SELECT * FROM `personne` ORDER BY id DESC";
 $request = $bd->query($sql);
 
 foreach ($request as $row) {

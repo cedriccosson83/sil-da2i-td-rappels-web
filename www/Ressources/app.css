@@ -202,6 +202,33 @@ h1 {
      text-align: center;    
 }
 
+/* FORM */ 
+
+form label {
+	width : 100%;
+}
+
+.form_template {
+	width : 100%;
+	text-align: center;
+
+}
+
+.form_input_text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+	width : 80%;
+	margin : 15px;
+}
+
+.form_textarea {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+	display:inherit;
+	width : 80%;
+	height: 500px;
+	max-width: 80%;
+	max-height: 800px;
+	margin : 15px auto;
+}
 
 /* title */
 
