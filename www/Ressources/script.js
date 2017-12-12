@@ -11,7 +11,7 @@ $(document).ready(function() {
             $("dt").append(" (0)");
         });
     });
-
+    
     $("#hideAside").click(function () {
         $("aside").delay(2000).hide(200);
     });
@@ -28,6 +28,7 @@ $(document).ready(function() {
     $("dd").css("display", "none");
     $("dt").attr("value", "0");
     $("dt").append(" (0)");
+
 
 
     $("body").on( "mouseenter", "#faq dt", function () {
